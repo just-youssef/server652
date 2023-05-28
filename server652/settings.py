@@ -59,7 +59,7 @@ MIDDLEWARE = [
 
 # CORS Configuration
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000', "http://192.168.1.3:3000"
+    'http://localhost:3000', "http://192.168.1.3:3000", "https://server652.vercel.app/"
 ]
 
 ROOT_URLCONF = 'server652.urls'
