@@ -9,7 +9,7 @@ class جنودViewSet(viewsets.ModelViewSet):
     A viewset for viewing and editing Note instances.
     """
     serializer_class = جنودSerializer
-    queryset = جنود.objects.all()
+    queryset = gnod.objects.all()
 
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ["رقم_عسكرى", "اسم"]
@@ -20,7 +20,7 @@ class ضباطViewSet(viewsets.ModelViewSet):
     A viewset for viewing and editing Note instances.
     """
     serializer_class = ضباطSerializer
-    queryset = ضباط.objects.all()
+    queryset = dobat.objects.all()
 
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields =  ["رقم_الأقدمية", "اسم"]
@@ -32,7 +32,7 @@ class ضباط_صفViewSet(viewsets.ModelViewSet):
     A viewset for viewing and editing Note instances.
     """
     serializer_class = ضباط_صفSerializer
-    queryset = ضباط_صف.objects.all()
+    queryset = dobat_saf.objects.all()
 
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ["رقم_عسكرى", "اسم"]

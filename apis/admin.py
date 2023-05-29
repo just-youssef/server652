@@ -21,6 +21,6 @@ class ضباط_صفAdmin(admin.ModelAdmin):
 class ضباطAdmin(admin.ModelAdmin):
     search_fields = ['اسم', 'رقم_الأقدمية']
 
-admin.site.register(جنود, جنودAdmin)
-admin.site.register(ضباط, ضباطAdmin)
-admin.site.register(ضباط_صف, ضباط_صفAdmin)
+admin.site.register(gnod, جنودAdmin)
+admin.site.register(dobat, ضباطAdmin)
+admin.site.register(dobat_saf, ضباط_صفAdmin)

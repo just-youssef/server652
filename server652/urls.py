@@ -28,9 +28,9 @@ from django.views.generic import RedirectView
 
 
 router = DefaultRouter()
-router.register(r'x', جنودViewSet, basename='جنود')
-router.register(r'ضباط', ضباطViewSet, basename='ضباط')
-router.register(r'ضباط_صف', ضباط_صفViewSet, basename='ضباط_صف')
+router.register(r'gnod', جنودViewSet, basename='جنود')
+router.register(r'dobat', ضباطViewSet, basename='ضباط')
+router.register(r'dobat_saf', ضباط_صفViewSet, basename='ضباط_صف')
 
 urlpatterns = i18n_patterns(
     path('', RedirectView.as_view(url='admin/')),
