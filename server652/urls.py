@@ -28,7 +28,7 @@ from django.views.generic import RedirectView
 
 
 router = DefaultRouter()
-router.register(r'جنود', جنودViewSet, basename='جنود')
+router.register(r'x', جنودViewSet, basename='جنود')
 router.register(r'ضباط', ضباطViewSet, basename='ضباط')
 router.register(r'ضباط_صف', ضباط_صفViewSet, basename='ضباط_صف')
 
