@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -59,7 +60,7 @@ MIDDLEWARE = [
 
 # CORS Configuration
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000', "http://192.168.1.3:3000", "https://view652.vercel.app/", "https://view652-just-youssef.vercel.app/" 
+    'http://localhost:3000', "http://192.168.1.3:3000", "https://view652.vercel.app", "https://view652-just-youssef.vercel.app" 
 ]
 
 ROOT_URLCONF = 'server652.urls'
@@ -86,13 +87,44 @@ WSGI_APPLICATION = 'server652.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'jS8FOeudzFHBYF3oJVdn',
+#         'HOST': 'containers-us-west-206.railway.app',
+#         'PORT': '7661',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 'rIzZfaB2t9Cv',
+        'HOST': 'ep-spring-dawn-739051-pooler.eu-central-1.postgres.vercel-storage.com',
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'URL': os.getenv('POSTGRES_URL'),
+#         'NAME': os.getenv('POSTGRES_DATABASE'),
+#         'USER': os.getenv('POSTGRES_USER'),
+#         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+#         'HOST': os.getenv('POSTGRES_HOST'),
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -154,5 +186,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-# python manage.py drf_create_token ,user>
-ACESS_TOKEN = "f1238821ef165d5a25573e64e7f33431125a58ab"
+# python manage.py drf_create_token <user>
+SQLITE_ACESS_TOKEN = "f1238821ef165d5a25573e64e7f33431125a58ab"
+POSTGRESQL_VERCEL_ACESS_TOKEN = ""
