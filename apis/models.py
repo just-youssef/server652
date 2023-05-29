@@ -1,6 +1,6 @@
 from django.db import models
 
-class gnod(models.Model):
+class جنود(models.Model):
     درجة = models.CharField(max_length=64, verbose_name ="الدرجة")
     اسم = models.CharField(max_length=64, verbose_name ="الإســـــم")
     رقم_عسكرى = models.CharField(max_length=64, primary_key=True, verbose_name="الرقم العسكرى")
@@ -14,7 +14,7 @@ class gnod(models.Model):
         return self.اسم
     
 
-class dobat(models.Model):
+class ضباط(models.Model):
     رتبة = models.CharField(max_length=64, verbose_name ="الرتبة")
     اسم = models.CharField(max_length=64, verbose_name ="الإســـــم")
     رقم_الأقدمية = models.CharField(max_length=64, primary_key=True, verbose_name="رقم الأقدمية")
@@ -27,7 +27,7 @@ class dobat(models.Model):
     def __str__(self):
         return self.اسم
 
-class dobat_saf(models.Model):
+class ضباط_صف(models.Model):
     درجة = models.CharField(max_length=64, verbose_name ="الدرجة")
     اسم = models.CharField(max_length=64, verbose_name ="الإســـــم")
     رقم_عسكرى = models.CharField(max_length=64, primary_key=True, verbose_name="الرقم العسكرى")

@@ -3,15 +3,15 @@ from .models import *
 
 class جنودSerializer(serializers.ModelSerializer):
     class Meta:
-        model = gnod
+        model = جنود
         fields = '__all__'
 
 class ضباطSerializer(serializers.ModelSerializer):
     class Meta:
-        model = dobat
+        model = ضباط
         fields = '__all__'
 
 class ضباط_صفSerializer(serializers.ModelSerializer):
     class Meta:
-        model = dobat_saf
+        model = ضباط_صف
         fields = '__all__'
