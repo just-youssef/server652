@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-az)6@!$=qk+v0raj5t**c67o+9#2wm3u!e)xii2gsk(x2h0fvs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "192.168.1.3", "https://server652.vercel.app/", "https://server652-just-youssef.vercel.app/"]
+ALLOWED_HOSTS = ["127.0.0.1", "192.168.1.3", "server652.vercel.app", "server652-just-youssef.vercel.app"]
 
 
 # Application definition
@@ -59,7 +59,7 @@ MIDDLEWARE = [
 
 # CORS Configuration
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000', "http://192.168.1.3:3000", 
+    'http://localhost:3000', "http://192.168.1.3:3000", "https://view652.vercel.app/", "https://view652-just-youssef.vercel.app/" 
 ]
 
 ROOT_URLCONF = 'server652.urls'
